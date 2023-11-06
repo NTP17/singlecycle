@@ -1,0 +1,6 @@
+addi x1, x0, -1920
+addi x3, x0, -1792
+loop:
+lh   x2,      0(x3)
+sw   x2,      0(x1)
+jal  x0,      loop

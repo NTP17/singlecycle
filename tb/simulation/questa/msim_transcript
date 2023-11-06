@@ -1,0 +1,285 @@
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 linux_x86_64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do singlecycle_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Copying /opt/intelFPGA/22.1std/questa_fse/linux_x86_64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/ntphu/MS2/src {/home/ntphu/MS2/src/outmem.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:32:58 on Nov 05,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/ntphu/MS2/src" /home/ntphu/MS2/src/outmem.v 
+# -- Compiling module outmem
+# 
+# Top level modules:
+# 	outmem
+# End time: 11:32:58 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/ntphu/MS2/src {/home/ntphu/MS2/src/inmem.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:32:58 on Nov 05,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/ntphu/MS2/src" /home/ntphu/MS2/src/inmem.v 
+# -- Compiling module inmem
+# 
+# Top level modules:
+# 	inmem
+# End time: 11:32:58 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/ntphu/MS2/src {/home/ntphu/MS2/src/datamem.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:32:58 on Nov 05,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/ntphu/MS2/src" /home/ntphu/MS2/src/datamem.v 
+# -- Compiling module datamem
+# 
+# Top level modules:
+# 	datamem
+# End time: 11:32:58 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/ntphu/MS2/src {/home/ntphu/MS2/src/instr_rom.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:32:58 on Nov 05,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/ntphu/MS2/src" /home/ntphu/MS2/src/instr_rom.v 
+# -- Compiling module instr_rom
+# 
+# Top level modules:
+# 	instr_rom
+# End time: 11:32:58 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/ntphu/MS2/src {/home/ntphu/MS2/src/wb_mux.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:32:58 on Nov 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ntphu/MS2/src" /home/ntphu/MS2/src/wb_mux.sv 
+# -- Compiling module wb_mux
+# 
+# Top level modules:
+# 	wb_mux
+# End time: 11:32:59 on Nov 05,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/ntphu/MS2/src {/home/ntphu/MS2/src/singlecycle.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:32:59 on Nov 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ntphu/MS2/src" /home/ntphu/MS2/src/singlecycle.sv 
+# -- Compiling module singlecycle
+# 
+# Top level modules:
+# 	singlecycle
+# End time: 11:32:59 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/ntphu/MS2/src {/home/ntphu/MS2/src/regfile.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:32:59 on Nov 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ntphu/MS2/src" /home/ntphu/MS2/src/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 11:32:59 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/ntphu/MS2/src {/home/ntphu/MS2/src/reg_dec.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:32:59 on Nov 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ntphu/MS2/src" /home/ntphu/MS2/src/reg_dec.sv 
+# -- Compiling module reg_dec
+# 
+# Top level modules:
+# 	reg_dec
+# End time: 11:32:59 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/ntphu/MS2/src {/home/ntphu/MS2/src/pc_reg.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:32:59 on Nov 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ntphu/MS2/src" /home/ntphu/MS2/src/pc_reg.sv 
+# -- Compiling module pc_reg
+# 
+# Top level modules:
+# 	pc_reg
+# End time: 11:32:59 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/ntphu/MS2/src {/home/ntphu/MS2/src/op_b_mux.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:32:59 on Nov 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ntphu/MS2/src" /home/ntphu/MS2/src/op_b_mux.sv 
+# -- Compiling module op_b_mux
+# 
+# Top level modules:
+# 	op_b_mux
+# End time: 11:32:59 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/ntphu/MS2/src {/home/ntphu/MS2/src/op_a_mux.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:32:59 on Nov 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ntphu/MS2/src" /home/ntphu/MS2/src/op_a_mux.sv 
+# -- Compiling module op_a_mux
+# 
+# Top level modules:
+# 	op_a_mux
+# End time: 11:32:59 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/ntphu/MS2/src {/home/ntphu/MS2/src/lsu.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:32:59 on Nov 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ntphu/MS2/src" /home/ntphu/MS2/src/lsu.sv 
+# -- Compiling module lsu
+# -- Compiling module addr_dec
+# -- Compiling module ld_mux
+# -- Compiling module latch32_cp
+# -- Compiling module reg32_cp
+# 
+# Top level modules:
+# 	lsu
+# End time: 11:32:59 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/ntphu/MS2/src {/home/ntphu/MS2/src/ld_sel_mux.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:32:59 on Nov 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ntphu/MS2/src" /home/ntphu/MS2/src/ld_sel_mux.sv 
+# -- Compiling module ld_sel_mux
+# 
+# Top level modules:
+# 	ld_sel_mux
+# End time: 11:32:59 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/ntphu/MS2/src {/home/ntphu/MS2/src/immGen.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:32:59 on Nov 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ntphu/MS2/src" /home/ntphu/MS2/src/immGen.sv 
+# -- Compiling module immGen
+# 
+# Top level modules:
+# 	immGen
+# End time: 11:32:59 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/ntphu/MS2/src {/home/ntphu/MS2/src/ctrl_unit.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:32:59 on Nov 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ntphu/MS2/src" /home/ntphu/MS2/src/ctrl_unit.sv 
+# -- Compiling module ctrl_unit
+# 
+# Top level modules:
+# 	ctrl_unit
+# End time: 11:32:59 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/ntphu/MS2/src {/home/ntphu/MS2/src/brcomp.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:32:59 on Nov 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ntphu/MS2/src" /home/ntphu/MS2/src/brcomp.sv 
+# -- Compiling module brcomp
+# 
+# Top level modules:
+# 	brcomp
+# End time: 11:32:59 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/ntphu/MS2/src {/home/ntphu/MS2/src/br_mux.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:32:59 on Nov 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ntphu/MS2/src" /home/ntphu/MS2/src/br_mux.sv 
+# -- Compiling module br_mux
+# 
+# Top level modules:
+# 	br_mux
+# End time: 11:33:00 on Nov 05,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/ntphu/MS2/src {/home/ntphu/MS2/src/alu.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:33:00 on Nov 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ntphu/MS2/src" /home/ntphu/MS2/src/alu.sv 
+# -- Compiling module alu
+# -- Compiling module arith_right_shift
+# 
+# Top level modules:
+# 	alu
+# End time: 11:33:00 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/ntphu/MS2/src {/home/ntphu/MS2/src/add4.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:33:00 on Nov 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ntphu/MS2/src" /home/ntphu/MS2/src/add4.sv 
+# -- Compiling module add4
+# 
+# Top level modules:
+# 	add4
+# End time: 11:33:00 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+/home/ntphu/MS2/tb {/home/ntphu/MS2/tb/singlecycle_tb.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 11:33:00 on Nov 05,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/ntphu/MS2/tb" /home/ntphu/MS2/tb/singlecycle_tb.sv 
+# -- Compiling module singlecycle_tb
+# 
+# Top level modules:
+# 	singlecycle_tb
+# End time: 11:33:00 on Nov 05,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  singlecycle_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" singlecycle_tb 
+# Start time: 11:33:00 on Nov 05,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.singlecycle_tb(fast)
+# Loading work.singlecycle(fast)
+# Loading work.ctrl_unit(fast)
+# Loading work.br_mux(fast)
+# Loading work.add4(fast)
+# Loading work.pc_reg(fast)
+# Loading work.instr_rom(fast)
+# Loading work.reg_dec(fast)
+# Loading work.immGen(fast)
+# Loading work.regfile(fast)
+# Loading work.brcomp(fast)
+# Loading work.op_a_mux(fast)
+# Loading work.op_b_mux(fast)
+# Loading work.alu(fast)
+# Loading work.arith_right_shift(fast)
+# Loading work.lsu(fast)
+# Loading work.addr_dec(fast)
+# Loading work.latch32_cp(fast)
+# Loading work.datamem(fast)
+# Loading altera_mf_ver.altsyncram(fast)
+# Loading altera_mf_ver.altsyncram_body(fast)
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES(fast)
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION(fast)
+# Loading work.outmem(fast)
+# Loading altera_mf_ver.altsyncram(fast__1)
+# Loading altera_mf_ver.altsyncram_body(fast__1)
+# Loading work.inmem(fast)
+# Loading work.reg32_cp(fast)
+# Loading work.ld_mux(fast)
+# Loading work.ld_sel_mux(fast)
+# Loading work.wb_mux(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (13) does not match connection size (32) for port 'alu_data'. The port definition is at: /home/ntphu/MS2/src/br_mux.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /singlecycle_tb/dut/brm File: /home/ntphu/MS2/src/singlecycle.sv Line: 34
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $finish    : /home/ntphu/MS2/tb/singlecycle_tb.sv(52)
+#    Time: 38 ps  Iteration: 0  Instance: /singlecycle_tb
+# 1
+# Break in Module singlecycle_tb at /home/ntphu/MS2/tb/singlecycle_tb.sv line 52
+# 
+# stdin: <EOF>
+# End time: 12:59:43 on Nov 05,2023, Elapsed time: 1:26:43
+# Errors: 0, Warnings: 1
