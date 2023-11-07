@@ -1,0 +1,221 @@
+addi x10, x0,  -2048 /* HEX0 */
+addi x11, x0,  -2032 /* HEX1 */
+addi x12, x0,  -2016 /* HEX2 */
+addi x13, x0,  -2000 /* HEX3 */
+addi x14, x0,  -1984 /* HEX4 */
+addi x15, x0,  -1968 /* HEX5 */
+addi x16, x0,  -1952 /* HEX6 */
+addi x17, x0,  -1936 /* HEX7 */
+addi x18, x0,  -1920 /* LEDR */
+addi x19, x0,  -1904 /* LEDG */
+addi x20, x0,  -1888 /* LCD  */
+addi x21, x0,  -1792 /* SW   */
+
+addi x2,  x0,  -65   /* 0 */
+sb   x2,        0(x0)
+addi x2,  x0,  -122  /* 1 */
+sb   x2,        4(x0)
+addi x2,  x0,  -37   /* 2 */
+sb   x2,        8(x0)
+addi x2,  x0,  -49   /* 3 */
+sb   x2,        12(x0)
+addi x2,  x0,  -26   /* 4 */
+sb   x2,        16(x0)
+addi x2,  x0,  -19   /* 5 */
+sb   x2,        20(x0)
+addi x2,  x0,  -3    /* 6 */
+sb   x2,        24(x0)
+addi x2,  x0,  -121  /* 7 */
+sb   x2,        28(x0)
+addi x2,  x0,  -1    /* 8 */
+sb   x2,        32(x0)
+addi x2,  x0,  -17   /* 9 */
+sb   x2,        36(x0)
+addi x2,  x0,  -9    /* A */
+sb   x2,        40(x0)
+addi x2,  x0,  -4    /* B */
+sb   x2,        44(x0)
+addi x2,  x0,  -71   /* C */
+sb   x2,        48(x0)
+addi x2,  x0,  -34   /* D */
+sb   x2,        52(x0)
+addi x2,  x0,  -7    /* E */
+sb   x2,        56(x0)
+addi x2,  x0,  -15   /* F */
+sb   x2,        60(x0)
+
+lui  x3,        524288 /* Turn on the LCD */
+addi x3,  x3,   1080   /* 8-bit, 2-line mode, E = 1 */
+sw   x3,        0(x20) /* Send to LCD */
+jal  x1,        delay  /* Delay a few miliseconds */
+
+addi x3,  x0,   56     /* 8-bit, 2-line mode, E = 0 */
+sh   x3,        0(x20)
+jal  x1,        delay
+
+addi x3,  x0,   1036   /* Cursor off, E = 1 */
+sh   x3,        0(x20)
+jal  x1,        delay
+
+addi x3,  x0,   12     /* Cursor off, E = 0 */
+sh   x3,        0(x20)
+jal  x1,        delay
+
+main:
+
+/* Set LEDG to show 101010101 */
+addi x2,  x0,   341
+sh   x2,        0(x19)
+
+/* Set HEX to display 01234567 */
+lb   x2,        0(x0)
+sb   x2,        0(x17)
+lb   x2,        4(x0)
+sb   x2,        0(x16)
+lb   x2,        8(x0)
+sb   x2,        0(x15)
+lb   x2,        12(x0)
+sb   x2,        0(x14)
+lb   x2,        16(x0)
+sb   x2,        0(x13)
+lb   x2,        20(x0)
+sb   x2,        0(x12)
+lb   x2,        24(x0)
+sb   x2,        0(x11)
+lb   x2,        28(x0)
+sb   x2,        0(x10)
+
+addi x3,  x0,   1025   /* Clear display, E = 1 */
+sh   x3,        0(x20)
+jal  x1,        delay
+
+addi x3,  x0,   1      /* Clear display, E = 0 */
+sh   x3,        0(x20)
+jal  x1,        delay
+
+addi x4,  x0,   16
+firstrow:
+
+addi x3,  x0,   1584   /* Print '0', E = 1 */
+sh   x3,        0(x20)
+jal  x1,        delay
+
+addi x3,  x0,   560    /* Print '0', E = 0 */
+sh   x3,        0(x20)
+jal  x1,        delay
+
+addi x4,  x4,  -1
+bne  x4,  x0,   firstrow
+
+addi x3,  x0,   1216   /* Set cursor, E = 1 */
+sh   x3,        0(x20)
+jal  x1,        delay
+
+addi x3,  x0,   192    /* Set cursor, E = 0 */
+sh   x3,        0(x20)
+jal  x1,        delay
+
+addi x4,  x0,   16
+secondrow:
+
+addi x3,  x0,   1585   /* Print '1', E = 1 */
+sh   x3,        0(x20)
+jal  x1,        delay
+
+addi x3,  x0,   561    /* Print '1', E = 0 */
+sh   x3,        0(x20)
+jal  x1,        delay
+
+addi x4,  x4,  -1
+bne  x4,  x0,   secondrow
+
+jal  x1,        delay1 /* Delay 1 second */
+
+/* Set LEDG to show 010101010 */
+addi x2,  x0,   170
+sh   x2,        0(x19)
+
+/* Set HEX to display 89AbCdEF */
+lb   x2,        32(x0)
+sb   x2,        0(x17)
+lb   x2,        36(x0)
+sb   x2,        0(x16)
+lb   x2,        40(x0)
+sb   x2,        0(x15)
+lb   x2,        44(x0)
+sb   x2,        0(x14)
+lb   x2,        48(x0)
+sb   x2,        0(x13)
+lb   x2,        52(x0)
+sb   x2,        0(x12)
+lb   x2,        56(x0)
+sb   x2,        0(x11)
+lb   x2,        60(x0)
+sb   x2,        0(x10)
+
+addi x3,  x0,   1025   /* Clear display, E = 1 */
+sh   x3,        0(x20)
+jal  x1,        delay
+
+addi x3,  x0,   1      /* Clear display, E = 0 */
+sh   x3,        0(x20)
+jal  x1,        delay
+
+addi x4,  x0,   16
+thirdrow:
+
+addi x3,  x0,   1586   /* Print '2', E = 1 */
+sh   x3,        0(x20)
+jal  x1,        delay
+
+addi x3,  x0,   562    /* Print '2', E = 0 */
+sh   x3,        0(x20)
+jal  x1,        delay
+
+addi x4,  x4,  -1
+bne  x4,  x0,   thirdrow
+
+addi x3,  x0,   1216   /* Set cursor, E = 1 */
+sh   x3,        0(x20)
+jal  x1,        delay
+
+addi x3,  x0,   192    /* Set cursor, E = 0 */
+sh   x3,        0(x20)
+jal  x1,        delay
+
+addi x4,  x0,   16
+fourthrow:
+
+addi x3,  x0,   1587   /* Print '3', E = 1 */
+sh   x3,        0(x20)
+jal  x1,        delay
+
+addi x3,  x0,   563    /* Print '3', E = 0 */
+sh   x3,        0(x20)
+jal  x1,        delay
+
+addi x4,  x4,  -1
+bne  x4,  x0,   fourthrow
+
+jal  x1,        delay1
+jal  x0,        main /* infinite Loop */
+
+delay:
+lui  x31,       9
+addi x31, x31, -1865 /* x31 = 34999 */
+d:
+addi x31, x31, -1
+lh   x30,       0(x21)
+sw   x30,       0(x18)
+bne  x31, x0,   d
+jalr x0,        0(x1)
+
+delay1:
+lui  x31,       610
+addi x31, x31,  1439 /* x31 = 2499999 */
+d1s:
+addi x31, x31, -1
+lh   x30,       0(x21)
+sw   x30,       0(x18)
+bne  x31, x0,   d1s
+jalr x0,        0(x1)
