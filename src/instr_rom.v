@@ -6,10 +6,7 @@ module instr_rom (
 	reg [31:0] mem [0:11'h7ff];
 
 	initial $readmemh("../mem/ALL_test.mem", mem);
-	//initial $readmemh("../mem/LCD_test.mem", mem);
-	//initial $readmemh("../mem/HEX_test.mem", mem);
-	//initial $readmemh("../mem/LEDG_test.mem", mem);
-	//initial $readmemh("../mem/LEDR_SW_test.mem", mem);
+	//initial $readmemh("../mem/ALL_testbench.mem", mem);
 
 	assign instr = mem[pc[12:2]];
 

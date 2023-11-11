@@ -1,1 +1,0 @@
-Warning (10268): Verilog HDL information at lsu.sv(111): always construct contains both blocking and non-blocking assignments File: /home/ntphu/MS2/src/lsu.sv Line: 111
